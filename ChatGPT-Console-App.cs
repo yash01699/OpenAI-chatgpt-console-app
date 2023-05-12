@@ -14,6 +14,9 @@ while(!prompt.Equals("stop",StringComparison.OrdinalIgnoreCase))
     var requestBody = new { prompt = prompt, max_tokens = 100, temperature = 0.5, model = "text-davinci-002" }; // you can change the model and the temperature also according to your preference
     var requestBodyJson = JsonConvert.SerializeObject(requestBody);
     var content = new StringContent(requestBodyJson, Encoding.UTF8, "application/json");
+    
+    var response = await httpClient.PostAsync(openAIEndpoint, content);
+    response.EnsureSuccessStatusCode();
 
     var responseBodyJson = await response.Content.ReadAsStringAsync();
     var openAIResponse = JsonConvert.DeserializeObject<OpenAIResponse>(responseBodyJson);
