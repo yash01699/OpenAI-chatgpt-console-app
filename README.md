@@ -1,7 +1,8 @@
 # OpenAI-chatgpt-console-app
 This project will help you simulate a mock chatgpt AI bot in a console application
 
-- in this project we will be using the OpenAI API, to send a request with your desired prompt message and in response we will get a response from the OpenAI's open source API.
+- In this project we will be using the OpenAI API, to send a request with your desired prompt message and in response we will get a response from the OpenAI's open source API.
+- I have created this project in .NET 6 so please change your code accordingly if you're using any other framework
 
 PROJECT PREREQUISITES:
 
